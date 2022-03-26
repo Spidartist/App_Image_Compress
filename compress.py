@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 
 st.set_page_config(
-    page_title="Image Compression Apps",
+    page_title="Image Compressor Apps",
     page_icon=":spider:",
     menu_items={
         'Get Help': 'https://www.facebook.com/spidartist',
