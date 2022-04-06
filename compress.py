@@ -68,10 +68,10 @@ if uploaded_file is not None:
     st.image(display_img / 255.0, channels="BGR", clamp=True)
     result_2 = result/255.0
     result_2 = Image.fromarray(result_2.astype('uint8'), 'RGB')
-    img = Image.open(result)
+    img = Image.open(result_2)
     btn = st.download_button(
              label="Download compressed image",
-             data=result,
+             data=result_2,
              file_name="a.png",
              mime="image/png"
            )
