@@ -66,5 +66,11 @@ if uploaded_file is not None:
     st.subheader("Result")
     display_img = np.concatenate(all_images, axis=1)
     st.image(display_img / 255.0, channels="BGR", clamp=True)
+    btn = st.download_button(
+             label="Download compressed image",
+             data=result,
+             file_name="a.png",
+             mime="image/png"
+           )
 
 
