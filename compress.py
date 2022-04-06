@@ -66,9 +66,9 @@ if uploaded_file is not None:
     st.subheader("Result")
     display_img = np.concatenate(all_images, axis=1)
     st.image(display_img / 255.0, channels="BGR", clamp=True)
+    
     result_2 = result/255.0
-    result_2 = Image.fromarray(result_2.astype('uint8'), 'RGB')
-    img = Image.open(result_2)
+    result_2 = Image.fromarray(result_2, 'RGB')
     btn = st.download_button(
              label="Download compressed image",
              data=result_2,
