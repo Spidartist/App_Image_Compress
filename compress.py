@@ -69,7 +69,7 @@ if uploaded_file is not None:
     
     result_2 = result/255.0
 #     result_2 = Image.fromarray(result_2, 'RGB')
-    encoded_image = cv2.imencode('.png', result_2)
+    success, encoded_image = cv2.imencode('.png', result_2)
     content = encoded_image.tobytes()
     btn = st.download_button(
              label="Download compressed image",
