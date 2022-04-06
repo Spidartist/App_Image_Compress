@@ -54,7 +54,7 @@ if uploaded_file is not None:
 
     # Now do something with the image! For example, let's display it:
     st.image(opencv_image, channels="BGR")
-    K = st.slider("Number of colors", 1, 23, 3)
+    K = st.slider("Number of colors", 1, 44, 3)
     result = compress(opencv_image, K)
     h, w, _ = opencv_image.shape
     white_line = np.ones((h, 100, 3)) * 255.0
