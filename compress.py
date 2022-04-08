@@ -68,7 +68,7 @@ if uploaded_file is not None:
     st.image(display_img / 255.0, channels="BGR", clamp=True)
     
     result_2 = result
-#     result_2 = Image.fromarray(result_2, 'RGB')
+#    result_2 = Image.fromarray(result_2, 'RGB')
     success, encoded_image = cv2.imencode('.png', result_2)
     content = encoded_image.tobytes()
     btn = st.download_button(
