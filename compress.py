@@ -49,9 +49,9 @@ if uploaded_file is not None:
     # Convert the file to an opencv image.
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
-    width = opencv_image.shape[0]
-    height = opencv_image.shape[1]
-    opencv_image = cv2.resize(opencv_image, (256, int(256*width/height)))
+    height = opencv_image.shape[0] # cv2 is little weird
+    width = opencv_image.shape[1]
+    opencv_image = cv2.resize(opencv_image, (256, int(256*height/width)))
     print(opencv_image.shape)
     K = 3
 
