@@ -65,7 +65,7 @@ if uploaded_file is not None:
     ]
     st.subheader("Result")
     display_img = np.concatenate(all_images, axis=1)
-    st.image(display_img / 255.0, channels="BGR", clamp=True)
+    st.image(display_img, channels="BGR", clamp=True)
     
     result_2 = result
 #    result_2 = Image.fromarray(result_2, 'RGB')
