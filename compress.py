@@ -51,7 +51,8 @@ if uploaded_file is not None:
     opencv_image = cv2.imdecode(file_bytes, 1)
     width = opencv_image.shape[0]
     height = opencv_image.shape[1]
-    opencv_image = cv2.resize(opencv_image, (256, int(256*height/width)))
+    opencv_image = cv2.resize(opencv_image, (256, int(256*width/height)))
+    print(opencv_image.shape)
     K = 3
 
     # Now do something with the image! For example, let's display it:
@@ -68,10 +69,8 @@ if uploaded_file is not None:
     st.subheader("Result")
     display_img = np.concatenate(all_images, axis=1)
     st.image(display_img / 255.0, channels="BGR", clamp=True)
-    
-    result_2 = result
-#    result_2 = Image.fromarray(result_2, 'RGB')
-    success, encoded_image = cv2.imencode('.png', result_2)
+#     result_2 = result
+    success, encoded_image = cv2.imencode('.png', result)
     content = encoded_image.tobytes()
     btn = st.download_button(
              label="Download compressed image",
