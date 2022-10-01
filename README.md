@@ -1,6 +1,6 @@
 # Image Compressor Web App
 ## Image Compress Application
-Link to app: <a href="https://share.streamlit.io/spidartist/app_image_compress/main/compress.py">Click me!</a>
+Link to app: <a href="https://spidartist-app-image-compress-compress-1jor8i.streamlitapp.com">Click me!</a>
 
 - This app is compress image (yes, it make image lost data, but the image is more lightweight)
 - Backgrond: When learn about K-means algorithm in Machine Learning, i want to build an app that use this algorithm
